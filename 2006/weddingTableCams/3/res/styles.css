@@ -1,0 +1,37 @@
+/* CSS Document */
+
+.text{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+}
+
+.textBold{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	font-weight: bold;
+}
+
+body {
+	margin: 0px;
+	background: white url(background.jpg) no-repeat;
+}
+.textSmall {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #999999;
+}
+.textBig {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #666666;
+}
+
+table#thumbs td {
+	padding: 0 0 8px 0;
+}
+
+a {
+	color: #999999;
+}

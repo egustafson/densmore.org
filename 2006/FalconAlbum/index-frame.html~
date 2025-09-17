@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<title>Falcon Album</title>
+<link href="res/styles.css" rel=stylesheet>
+</head>
+
+<body id="index">
+<table>
+<tr>
+<td class="nav">
+Falcon Album
+<FONT color="#ffaaaa" size=-1>
+<BR> Please consider all photos property of
+<A HREF="mailto:jim=at=densmore.org">Jim Densmore</A>;
+<BR> please use only with permission /
+<BR> I have full-size photos (3072x2048) available!
+<!-- Create Google-like navigation links if more than one index page -->
+
+</td>
+<td>
+<!-- Iterate through images and produce an index table -->
+<table>
+
+	<tr>
+	
+		<td valign="bottom" width="90">
+				<a title="Best of N51DY" target="_top" href="Best of N51DY/index.html">
+				
+					<!-- No frames around icons like folders and movie files -->
+					<img src="res/folder.gif" width="34" height="29" border=0><br>
+					<small>Best of N51DY</small>
+				
+			</a>
+		</td>
+	
+		<td valign="bottom" width="90">
+				<a title="Gorgeous airplanes" target="_top" href="Gorgeous airplanes/index.html">
+				
+					<!-- No frames around icons like folders and movie files -->
+					<img src="res/folder.gif" width="34" height="29" border=0><br>
+					<small>Gorgeous airplanes</small>
+				
+			</a>
+		</td>
+	
+		<td valign="bottom" width="90">
+				<a title="More N51DY" target="_top" href="More N51DY/index.html">
+				
+					<!-- No frames around icons like folders and movie files -->
+					<img src="res/folder.gif" width="34" height="29" border=0><br>
+					<small>More N51DY</small>
+				
+			</a>
+		</td>
+	
+		<td valign="bottom" width="90">
+				<a title="The Helos flew all day" target="_top" href="The Helos flew all day/index.html">
+				
+					<!-- No frames around icons like folders and movie files -->
+					<img src="res/folder.gif" width="34" height="29" border=0><br>
+					<small>The Helos flew all day</small>
+				
+			</a>
+		</td>
+	
+	</tr>
+
+
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

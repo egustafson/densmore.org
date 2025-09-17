@@ -1,0 +1,83 @@
+<HTML>
+<HEAD><TITLE>Revisiting Python after all these years</TITLE></HEAD>
+<BODY>
+<P>
+What fun I've just had, and of course it won't stop now.
+My buddy Murray has been doing some Python development.
+That looked cool, and I had a bit of a need.
+It has been too long since I've done serious coding, and I've always really enjoyed it.
+</P>
+
+<P>
+So I dove in.
+Anaconda is the place to get your Python, and unless you already know Python really well, just choose Python 3.
+I did a lot of Python coding between 1993-1995, so it has been awhile, and how Python has grown.
+Its facilities cover almost everything you might need, and the language is at once familiar and updated.
+Matplotlib may be the coolest thing I've found so far, the graphs are really straightforward.
+</P>
+
+<P>
+I decided to start with a program to perform arithmetic on random variables.
+I wanted this because of something I've recently lost.
+In moving from a PC to a Mac, I discovered that the Monte Carlo simulator plugin to Microsoft Excel I once bought is written in Basic and doesn't work on the Mac's Excel.
+I needed ... something! If your college statistics is starting to fade on you, a random variable is a quantity, a number, but its value isn't known; instead it has a value for each member of a group, especially one whose values occur according to a frequency distribution like a normal distribution or a triangular distribution.
+Two examples, "this random variable is normally distributed and has a mean of 3 & standard deviation of 1" (picture your classic bell curve) and "this random variable is a triangular distribution with lowest value 5, highest value 20, and most-likely value 8".
+</P>
+
+<P>
+Closed form results are sometimes possible for certain equations, but computers make it easy to do arithmetic when the calculation includes random variables: you use Monte Carlo simulation.
+This just means picking values from your random variables according to the distributions describing them, then since you have concrete values now doing the arithmetic, storing the result into a list.
+Then repeat oh, say, 10000 times.
+That done, feed the list to a histogram, that is, create an empirical distribution.
+That's worth repeating if these synapses are stale: the expected outcome isn't a number, it's an empirical distribution.
+I found it straightforward to compute an arithmetic mean, median, variance and standard deviation, and if you use MatPlotLib it's quick-n-easy to build the histogram.
+The concept of a running mean and running variance are useful in maintaining good precision in the results; if that bit is new to you there's plenty online for these.
+</P>
+
+<P>
+I'm still working on the code, refining it, but generally here's what I have.
+</P>
+
+<P>
+<OL>
+<LI>a TrialRegistry class.
+One needs to use a concrete value in a random variable several times in an equation.
+When you're done with the equation and wish another trial, you want to ensure that all the random variables "go to" the next sample.
+This class knows where all the random variable are, and makes that happen.
+</LI>
+<LI>RandomValue class: a "base class" or "super class" for our random variables.
+So far I have created for three distributions: normal, uniform, and triangular.
+</LI>
+<LI>I built a Distribution class to accrue sample outcomes for an equation.
+A .finish method is present to calculate statistics and produce the histogram.
+</LI>
+<LI>Finally I built a simple Drive class that just has an __init__ method right now.
+In it, I create the random variables I need (for example, "r1 = TriangularRandomValue(trialRegistry, 5.0, 8.0, 20.0)") and then I use them in an equation of interest that has a numerical result.
+Pass each such result, in a loop, to a Distribution class object, and that object does the work of calculating the statistics.
+</LI>
+<LI>And I developed a testing class.
+One feature is that it will go unseeded, which means it's going to have different outcomes each time, or it will go with a specific random seed, so that you can expect the same results from your pseudorandom number generator each time.
+</LI>
+</OL>
+</P>
+
+<P>
+In 150 lines of code plus some documentation so I can remember what the heck I did, and importing matplotlib and random, I have a clean capability to perform arithmetic on random variables, specifying the equation(s) right in the program.
+This was fun, and it's been a cool reintroduction for me to Python.
+The online world today is amazing; ask a question about how to do something in Python, and the answer is right there.
+I'll keep at this! If you've been a programmer before but you've moved away from it, Python is my recommendation for jumping back in.
+</P>
+
+<P>
+Take care and see you on the bitstream. -- Jim
+</P>
+
+<UL>
+<LI><A HREF="https://www.continuum.io/blog/developer-blog/python-3-support-anaconda">Anaconda</A></LI>
+<LI><A HREF="http://www.python.org">python.org</A></LI>
+<LI><A HREF="http://www.matplotlib.org">matplotlib.org</A></LI>
+</UL>
+<HR>
+<img src="distributionScreenshot.jpg">
+</BODY>
+</HTML>
